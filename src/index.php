@@ -1,2 +1,5 @@
 <?php
-echo "Hello World";
+
+declare(strict_types=1);
+
+require_once 'objects.php';

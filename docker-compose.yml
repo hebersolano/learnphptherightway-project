@@ -27,6 +27,14 @@ services:
     networks:
       - internal
 
+  composer:
+    image: composer:latest
+    container_name: composer-tool
+    working_dir: /var/www
+    volumes:
+      - ./src:/var/www/html
+    command: ["composer", "install"]
+
 networks:
   internal:
     driver: bridge
